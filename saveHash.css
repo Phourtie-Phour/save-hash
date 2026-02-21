@@ -30,6 +30,7 @@ html{
   color: #70b6f0;
   background-color: #004175;
   padding: 0.5em;
+  text-decoration: none;
 }
 
 .saveHash__link::before{
@@ -40,9 +41,17 @@ html{
   color: inherit;
 }
 
-.saveHash__link:nth-child(even) {
+.saveHash__output p:nth-child(odd) .saveHash__link{
+  background-color: #f0f0f0;
+  color: #333333;
+  font-weight: bold;
+  padding: 8px 15px;
+}
+
+.saveHash__output p:nth-child(even) .saveHash__link{
   background-color: #1479cc;
   color: #012746;
+  padding: 8px 15px;
 }
 
 .saveHash__link--savable{
@@ -58,7 +67,6 @@ html{
   padding: 0.5rem;
 }
 
-
 .saveHash__initialContent {
   transition: transform 0.3s ease-in-out;
 }
@@ -66,4 +74,8 @@ html{
 .saveHash__initialContent--active {
   transform: translateX(250px);
   max-width: calc(100% - 250px);
+}
+
+.saveHash__output{
+  max-width: 40%;
 }
